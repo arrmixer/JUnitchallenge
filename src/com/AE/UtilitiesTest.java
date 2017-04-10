@@ -18,6 +18,7 @@ public class UtilitiesTest {
     }
 
 
+
     @org.junit.Test
     public void everyNthChar() throws Exception {
 
@@ -44,7 +45,7 @@ public class UtilitiesTest {
     }
 
     @org.junit.Test(expected = ArithmeticException.class)
-    public void converter_arithemeticExeception() throws Exception {
+    public void converter_arithmeticException() throws Exception {
 
         utils.converter(10,0);
     }
