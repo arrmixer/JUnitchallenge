@@ -10,7 +10,13 @@ import static org.junit.Assert.assertNotNull;
  */
 public class UtilitiesTest {
 
-    Utilities utils = new Utilities();
+    private Utilities utils;
+
+    @org.junit.Before
+    public void setup(){
+        utils = new Utilities();
+    }
+
 
     @org.junit.Test
     public void everyNthChar() throws Exception {
