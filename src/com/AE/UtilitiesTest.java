@@ -10,11 +10,11 @@ import static org.junit.Assert.assertNotNull;
  */
 public class UtilitiesTest {
 
-
+    Utilities utils = new Utilities();
 
     @org.junit.Test
     public void everyNthChar() throws Exception {
-        Utilities utils = new Utilities();
+
         char[] output = utils.everyNthChar(new char[] {'h','e','l','l','o'}, 2);
         assertArrayEquals(new char[] {'e','l'}, output );
         char[] output2 = utils.everyNthChar(new char[] {'h','e','l','l','o'}, 8);
@@ -23,31 +23,31 @@ public class UtilitiesTest {
 
     @org.junit.Test
     public void removePairs() throws Exception {
-       Utilities util = new Utilities();
-       assertEquals("ABCDEF", util.removePairs("AABCDDEFF"));
-       assertEquals("ABCABDEF", util.removePairs("ABCCABDEEF"));
-       assertNull("Did not get null returned when arguement passed was null", util.removePairs(null));
-       assertEquals("A", util.removePairs("A"));
-       assertEquals("", util.removePairs(""));
+
+       assertEquals("ABCDEF", utils.removePairs("AABCDDEFF"));
+       assertEquals("ABCABDEF", utils.removePairs("ABCCABDEEF"));
+       assertNull("Did not get null returned when arguement passed was null", utils.removePairs(null));
+       assertEquals("A", utils.removePairs("A"));
+       assertEquals("", utils.removePairs(""));
     }
 
     @org.junit.Test
     public void converter() throws Exception {
-        Utilities util2 = new Utilities();
-        assertEquals(300, util2.converter(10,5));
+
+        assertEquals(300, utils.converter(10,5));
     }
 
     @org.junit.Test(expected = ArithmeticException.class)
     public void converter_arithemeticExeception() throws Exception {
-        Utilities util3 = new Utilities();
-        util3.converter(10,0);
+
+        utils.converter(10,0);
     }
 
     @org.junit.Test
     public void nullIfOddLength() throws Exception {
-        Utilities util1 = new Utilities();
-        assertNull(util1.nullIfOddLength("odd"));
-        assertNotNull(util1.nullIfOddLength("even"));
+
+        assertNull(utils.nullIfOddLength("odd"));
+        assertNotNull(utils.nullIfOddLength("even"));
 
     }
 
